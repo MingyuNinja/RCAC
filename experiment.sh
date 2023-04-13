@@ -13,4 +13,4 @@ for pid in "${pids[@]}"; do
     wait $pid
 done
 
-# sleep 2d
+# sleep 2

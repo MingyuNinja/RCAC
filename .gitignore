@@ -129,6 +129,6 @@ dmypy.json
 .pyre/
 
 # Frequently updated
-logs/
-configs/
-/experiment.sh
+/configs
+/logs
+./experiment.sh
