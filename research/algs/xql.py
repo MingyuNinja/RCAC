@@ -298,7 +298,7 @@ class XQL(Algorithm):
             log_prob = dist.log_prob(action).sum(dim=-1)
             
             qs = self.network.critic(obs, action)
-            q = torch.min(qs, dim=0)[0]
+            q = torch.mean(qs, dim=0)[0]
             
             if self._alpha is None:
                 reverse_kl = self.alpha.detach() * log_prob - q
